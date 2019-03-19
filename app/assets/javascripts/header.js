@@ -1,0 +1,16 @@
+$(document).on("turbolinks:load",function(){
+  //左
+  $(".mypade-link").mouseover(function(){
+    $(".title--right--mypage--underbar").css("display","block")
+  })
+  $(".mypade-link").mouseout(function(){
+    $(".title--right--mypage--underbar").css("display","none")
+  })
+  //右
+  $(".title--table-link").mouseover(function(){
+    $(".title--right--table--underbar").css("display","block")
+  })
+  $(".title--table-link").mouseout(function(){
+    $(".title--right--table--underbar").css("display","none")
+  })
+})

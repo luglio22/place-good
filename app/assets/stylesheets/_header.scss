@@ -1,0 +1,120 @@
+.products-top--title{
+  display: block;
+  margin: 10px;
+  &--text{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Hannotate SC',sans-serif;
+    display: inline-block;
+
+    &-g{
+      margin: 8px 0 0 0 ;
+      color: red;
+      display: inline-block;
+    }
+
+    &-o{
+      margin: 6px 0 0 0 ;
+      color: blue;
+      display: inline-block;
+    }
+    &-o2{
+      margin: 4px 0 0 0 ;
+      color: green;
+      display: inline-block;
+    }
+
+    &-d{
+      margin: 2px 0 0 0 ;
+      color: orange;
+      display: inline-block;
+    }
+
+    &-p{
+      margin: 2px 0 0 5px ;
+      color: green;
+      display: inline-block;
+    }
+    &-l{
+      margin: 4px 0 0 0 ;
+      color: red;
+      display: inline-block;
+    }
+    &-a{
+      margin: 6px 0 0 0 ;
+      color: blue;
+      display: inline-block;
+    }
+    &-c{
+      margin: 8px 0 0 0 ;
+      color: orange;
+      display: inline-block;
+    }
+
+    &-e{
+      margin: 6px 0 0 0 ;
+      color: purple;
+      display: inline-block;
+    }
+  }
+
+  &--describe{
+    font-family: arial,sans-serif;
+    font-size: 12px;
+    margin: 10px;
+    display: inline-block;
+  }
+
+  &--right{
+    float: right;
+    margin: 10px;
+    font-size: 12px;
+    font-family: 'Hannotate SC',sans-serif;
+
+
+    &--mypage{
+      display: inline-block;
+
+      .mypade-link{
+        text-decoration: none;
+        color: #333;
+      }
+
+      :hover{
+          transform: scale(1.05,1.05);
+          opacity: 0.5;
+      }
+
+      .title--right--mypage--underbar{
+        display: none;
+        background: blue;
+        width: 100%;
+        margin-top: 2px;
+        height: 3px;
+      }
+    }
+
+    &--table{
+      margin-left: 10px;
+      display: inline-block;
+
+      .title--table-link{
+        text-decoration: none;
+        color: #333;
+      }
+
+      :hover{
+        transform: scale(1.05,1.05);
+        opacity: 0.5;
+      }
+
+      .title--right--table--underbar{
+        display: none;
+        background: blue;
+        width: 100%;
+        margin-top: 2px;
+        height: 3px;
+      }
+    }
+  }
+}

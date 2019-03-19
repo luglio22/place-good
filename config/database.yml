@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: place-good_production
-  username: place-good
-  password: <%= ENV['PLACE-GOOD_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

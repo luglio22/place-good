@@ -11,9 +11,24 @@
     .products-top--title--text-e e
   .products-top--title--describe あなたの地元、思い出の場所はどこですか？？
   .products-top--title--right
-    .products-top--title--right--mypage
-      = link_to "マイページ", users_path ,class: "mypade-link"
-      .title--right--mypage--underbar
-    .products-top--title--right--table
-      = link_to "新規登録", new_user_registration_path, class: "title--table-link"
-      .title--right--table--underbar
+    .products-top--title--right--about
+      = link_to "about this service", users_path ,class: "about-link"
+      .title--right--about--underbar
+    - if user_signed_in?
+      .products-top--title--right--favorite
+        = link_to "お気に入り", "#" ,class: "favorite-link"
+        .title--right--favorite--underbar
+      .products-top--title--right--mypage
+        = link_to users_path,class: "mypage-link" do
+          =@user.nickname
+        .title--right--mypage--underbar
+      .products-top--title--right--logout
+        = link_to "ログアウト", destroy_user_session_path,method: :delete, class: "logout-link"
+        .title--right--logout--underbar
+    -else
+      .products-top--title--right--login
+        = link_to "ログイン", new_user_session_path ,class: "login-link"
+        .title--right--login--underbar
+      .products-top--title--right--table
+        = link_to "新規登録", new_user_registration_path, class: "title--table-link"
+        .title--right--table--underbar

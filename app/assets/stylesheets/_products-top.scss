@@ -3,11 +3,14 @@
 
   &--image{
     display: flex;
-    max-width: 1440px;
+    max-width: 1300px;
     height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 auto;
 
     &--left{
-      margin: 20px;
+      margin: 16px;
 
       .link-top-left{
         text-decoration: none;
@@ -50,7 +53,7 @@
     }
 
     &--center{
-      margin: 20px;
+      margin: 16px;
 
       .link-top-center{
         text-decoration: none;
@@ -93,7 +96,7 @@
   }
 
     &--right{
-      margin: 20px;
+      margin: 16px;
 
       .link-top-right{
         text-decoration: none;

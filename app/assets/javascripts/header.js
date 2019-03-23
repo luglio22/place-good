@@ -1,16 +1,45 @@
 $(document).on("turbolinks:load",function(){
-  //左
-  $(".mypade-link").mouseover(function(){
-    $(".title--right--mypage--underbar").css("display","block")
+  //ヘッダーアンダーバー
+  //about this
+  $(".about-link").mouseover(function(){
+    $(".title--right--about--underbar").css("display","block")
   })
-  $(".mypade-link").mouseout(function(){
-    $(".title--right--mypage--underbar").css("display","none")
+  $(".about-link").mouseout(function(){
+    $(".title--right--about--underbar").css("display","none")
   })
-  //右
+  //ログイン
+  $(".login-link").mouseover(function(){
+    $(".title--right--login--underbar").css("display","block")
+  })
+  $(".login-link").mouseout(function(){
+    $(".title--right--login--underbar").css("display","none")
+  })
+  //新規登録
   $(".title--table-link").mouseover(function(){
     $(".title--right--table--underbar").css("display","block")
   })
   $(".title--table-link").mouseout(function(){
     $(".title--right--table--underbar").css("display","none")
+  })
+  //ログアウト
+  $(".logout-link").mouseover(function(){
+    $(".title--right--logout--underbar").css("display","block")
+  })
+  $(".logout-link").mouseout(function(){
+    $(".title--right--logout--underbar").css("display","none")
+  })
+  //お気に入り
+  $(".favorite-link").mouseover(function(){
+    $(".title--right--favorite--underbar").css("display","block")
+  })
+  $(".favorite-link").mouseout(function(){
+    $(".title--right--favorite--underbar").css("display","none")
+  })
+  //ユーザー名
+  $(".mypage-link").mouseover(function(){
+    $(".title--right--mypage--underbar").css("display","block")
+  })
+  $(".mypage-link").mouseout(function(){
+    $(".title--right--mypage--underbar").css("display","none")
   })
 })

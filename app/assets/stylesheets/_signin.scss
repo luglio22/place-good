@@ -1,0 +1,72 @@
+.registration-new{
+  font-family: 'Hannotate SC',sans-serif;
+  margin: 30px auto;
+  width: 1300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  &--title{
+    font-size: 20px;
+    margin: 10px 0 0 10px;
+  }
+
+  &--content{
+    margin-top: 10px;
+
+    table.regstration-form{
+      width: 90%;
+      margin: 0 auto;
+
+      td.registration-form--nickname{
+      }
+
+      td.registration-form--name{
+        .registration-form--name--tilte{
+          display: flex;
+        }
+        .registraion-form--first-name--text-field{
+          display: inline-block;
+        }
+
+        .registraion-form--last-name--text-field{
+          display: inline-block;
+        }
+      }
+
+      td.registration-form--name-jp{
+      }
+
+      td.registration-form--address{
+      }
+
+      td.registration-form--password{
+      }
+    }
+
+      .registration-next{
+
+        .registration-btn{
+          background: blue;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 12px;
+          margin: 10px;
+        }
+
+        :hover{
+          background: #fff;
+          color: blue;
+        }
+
+
+        .registration-login-btn{
+          border-radius: 5px;
+          font-size: 12px;
+          margin: 10px;
+          padding: 1px 7px 2px;
+          text-decoration: none;
+          display: inline-block;
+        }
+      }
+  }
+}

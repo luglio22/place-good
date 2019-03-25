@@ -15,9 +15,9 @@
       = link_to "about this service", users_path ,class: "about-link"
       .title--right--about--underbar
     - if user_signed_in?
-      .products-top--title--right--favorite
-        = link_to "お気に入り", "#" ,class: "favorite-link"
-        .title--right--favorite--underbar
+      .products-top--title--right--vote
+        = link_to "投稿", new_product_path ,class: "vote-link"
+        .title--right--vote--underbar
       .products-top--title--right--mypage
         = link_to users_path,class: "mypage-link" do
           =@user.nickname

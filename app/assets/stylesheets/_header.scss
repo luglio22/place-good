@@ -96,11 +96,11 @@
       }
     }
 
-    &--favorite{
+    &--vote{
       display: inline-block;
       margin-left: 10px;
 
-      .favorite-link{
+      .vote-link{
         text-decoration: none;
         color: #333;
       }
@@ -110,7 +110,7 @@
           opacity: 0.5;
       }
 
-      .title--right--favorite--underbar{
+      .title--right--vote--underbar{
         display: none;
         background: blue;
         width: 100%;

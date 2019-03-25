@@ -28,12 +28,12 @@ $(document).on("turbolinks:load",function(){
   $(".logout-link").mouseout(function(){
     $(".title--right--logout--underbar").css("display","none")
   })
-  //お気に入り
-  $(".favorite-link").mouseover(function(){
-    $(".title--right--favorite--underbar").css("display","block")
+  //投稿
+  $(".vote-link").mouseover(function(){
+    $(".title--right--vote--underbar").css("display","block")
   })
-  $(".favorite-link").mouseout(function(){
-    $(".title--right--favorite--underbar").css("display","none")
+  $(".vote-link").mouseout(function(){
+    $(".title--right--vote--underbar").css("display","none")
   })
   //ユーザー名
   $(".mypage-link").mouseover(function(){

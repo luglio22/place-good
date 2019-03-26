@@ -1,0 +1,51 @@
+.product-vote{
+  font-family: 'Hannotate SC',sans-serif;
+  margin: 30px auto;
+  width: 1300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: none;
+
+  &--title{
+    font-size: 20px;
+    margin: 10px 0 0 10px;
+  }
+
+  &--main{
+    margin: 10px;
+
+    table.vote-table{
+      margin: 10px;
+      display: inline-block;
+      vertical-align: middle;
+
+      td.vote-table--title{
+      }
+
+      td.vote-table--describe{
+        padding-left: 20px;
+      }
+
+      td.vote-table--image{
+        padding-left: 20px;
+      }
+    }
+
+    .product-vote--next{
+      display: inline-block;
+      vertical-align: middle;
+
+      .vote-btn{
+        height: 60px;
+        width: 60px;
+        display: block;
+        border-radius: 30px;
+        background: #fff;
+      }
+
+      :hover{
+        background: #ddd;
+      }
+    }
+  }
+}

@@ -1,5 +1,9 @@
 .products-top
   =render "shared/header"
+  .about-this
+    .about-this--title place good とは??
+    .about-this--main
+      .about-this--main--describe place good と旅行をしてもう一度行ってみたい場所、地元のあなたしか知らない場所など思い出やお気に入りの場所の写真を投稿し、みんなでシェアするWebサイトです。
   .products-top--image
     .products-top--image--left
       = link_to "#", class: "link-top-left" do
@@ -16,15 +20,19 @@
         =image_tag "https://img.travel.rakuten.co.jp/mytrip/content/ranking/spot-tokyo/images/01-3-skytree.jpg",class: "top-image-right"
         .top-image-right--title スカイツリー
         .top-image-right--text 東京都墨田区押上1丁目1-2
-.about-this
-  .about-this--title place good とは??
-  .about-this--main
-    .about-this--main--describe place good とは○○○
-    %table.log-in-form
-      %td.log-in-form--adrdess
-        .log-in-form--adrdess--title メールアドレス
-      %td.log-in-form--password
-        .log-in-form--password--title パスワード
-.favorite
-  .favorite--title お気に入り
-  .favorite--main 一覧
+.product-vote
+  .product-vote--title 投稿
+  .product-vote--main
+    = form_for :product, url: products_path do |f|
+      %table.vote-table
+        %td.vote-table--title
+          .vote-table--title--text タイトル
+          = f.text_field :title, class: "vote-form--title-field"
+        %td.vote-table--describe
+          .vote-table--describe--text 説明
+          = f.text_field :describe, class: "vote-form--describe-field"
+        %td.vote-table--image
+          .vote-table--image--image 画像
+          = f.file_field :image, class: "vote-form--image-field"
+      .product-vote--next
+        = button_tag "投稿",class: "vote-btn"

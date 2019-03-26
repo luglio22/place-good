@@ -4,10 +4,13 @@
     = form_for :product, url: products_path do |f|
       %table.vote-table
         %td.vote-table--title
+          .vote-table--title--text タイトル
           = f.text_field :title, class: "vote-form--title-field"
         %td.vote-table--describe
+          .vote-table--describe--text 説明
           = f.text_field :describe, class: "vote-form--describe-field"
         %td.vote-table--image
+          .vote-table--image--image 画像
           = f.file_field :image, class: "vote-form--image-field"
       .product-vote--next
-        = button_tag "次に進む",class: "vote-btn"
+        = button_tag "投稿",class: "vote-btn"

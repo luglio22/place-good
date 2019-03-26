@@ -1,0 +1,13 @@
+.product-vote
+  .product-vote--title 投稿
+  .product-vote--main
+    = form_for :product, url: products_path do |f|
+      %table.vote-table
+        %td.vote-table--title
+          = f.text_field :title, class: "vote-form--title-field"
+        %td.vote-table--describe
+          = f.text_field :describe, class: "vote-form--describe-field"
+        %td.vote-table--image
+          = f.file_field :image, class: "vote-form--image-field"
+      .product-vote--next
+        = button_tag "次に進む",class: "vote-btn"

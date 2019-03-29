@@ -1,5 +1,31 @@
 .user-top
   .user-top--title マイページ
   .user-top--main
-    .user-top--main--title 投稿一覧
+    .user-top--main--nickname
+      .user-top--main--nickname--left ニックネーム
+      .user-top--main--nickname--right
+        = @users.nickname
+    .user-top--main--fist-name
+      .user-top--main--fist-name--left 苗字
+      .user-top--main--fist-name--right
+        = @users.first_name
+    .user-top--main--last-name
+      .user-top--main--last-name--left 名前
+      .user-top--main--last-name--right
+        = @users.last_name
+    .user-top--main--fist-name-jp
+      .user-top--main--fist-name-jp--left 苗字(フリガナ)
+      .user-top--main--fist-name-jp--right
+        = @users.first_name_jp
+    .user-top--main--last-name-jp
+      .user-top--main--last-name-jp--left 名前(フリガナ)
+      .user-top--main--last-name-jp--right
+        = @users.last_name_jp
+    .user-top--main--address
+      .user-top--main--address--left 住所
+      .user-top--main--address--right
+        = @users.add_ress
+  .user-top--edit
+    = link_to "編集", "#", class: "user-top--edit--link"
+  .user-top--title 投稿一覧
   = link_to "トップページに戻る", products_path, class: "top-page-link"

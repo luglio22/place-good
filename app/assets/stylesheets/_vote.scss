@@ -20,10 +20,16 @@
       vertical-align: middle;
 
       td.vote-table--title{
+        .vote-form--title-field{
+          border-radius:10%;
+        }
       }
 
       td.vote-table--describe{
         padding-left: 20px;
+        .vote-form--describe-field{
+          border-radius:10%;
+        }
       }
 
       td.vote-table--image{
@@ -41,10 +47,18 @@
         display: block;
         border-radius: 30px;
         background: #fff;
+        -webkit-transition: 0.3s ease-in-out;
+          -moz-transition: 0.3s ease-in-out;
+          -o-transition: 0.3s ease-in-out;
+          transition: 0.5s;
       }
 
       :hover{
-        background: #ddd;
+        transform: scale(1.3,1.3);
+          -moz-transform: scale(1.3,1.3);
+          -webkit-transform: scale(1.3,1.3);
+          -o-transform: scale(1.3,1.3);
+          -ms-transform: scale(1.3,1.3);
       }
     }
   }

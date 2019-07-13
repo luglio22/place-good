@@ -3,7 +3,7 @@
   .about-this
     .about-this--title place good とは??
     .about-this--main
-      .about-this--main--describe place good と旅行をしてもう一度行ってみたい場所、地元のあなたしか知らない場所など思い出やお気に入りの場所の写真を投稿し、みんなでシェアするWebサイトです。
+      .about-this--main--describe place good
   .products-top--image
     .products-top--image--left
       = link_to "#", class: "link-top-left" do
@@ -27,10 +27,10 @@
       %table.vote-table
         %td.vote-table--title
           .vote-table--title--text タイトル
-          = f.text_field :title, class: "vote-form--title-field"
+          = f.text_field :title, class: "vote-form--title-field",placeholder: "タイトル"
         %td.vote-table--describe
           .vote-table--describe--text 説明
-          = f.text_field :describe, class: "vote-form--describe-field"
+          = f.text_field :describe, class: "vote-form--describe-field",placeholder: "説明"
         %td.vote-table--image
           .vote-table--image--image 画像
           = f.file_field :image, class: "vote-form--image-field"

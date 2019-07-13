@@ -7,11 +7,16 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @products = Product.new
+  end
+
+
+  def show
+    @tproduct = Product.find(params[:id])
   end
 
   def create
-    @product  = Product.new(title: product_params[:title], describe: product_params[:describe], image: product_params[:image], user_id: current_user.id)
-    @product.save
+    @product  = Product.create(title: product_params[:title], describe: product_params[:describe], image: product_params[:image], user_id: current_user.id)
     redirect_to products_path
   end
 
@@ -26,7 +31,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.permit(:title, :describe, :image)
+    params.require(:product).permit(:title, :describe, :image).merge(user_id: current_user.id)
   end
 
   def move_to_index

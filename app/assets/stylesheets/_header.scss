@@ -9,6 +9,7 @@
     font-family: 'Hannotate SC',sans-serif;
     display: inline-block;
     margin-left: 10px;
+    margin-bottom: 5px;
 
     &-g{
       margin: 8px 0 0 0 ;
@@ -74,31 +75,9 @@
     font-size: 12px;
     font-family: 'Hannotate SC',sans-serif;
 
-    &--about{
-      display: inline-block;
-
-      .about-link{
-        text-decoration: none;
-        color: #333;
-      }
-
-      :hover{
-          transform: scale(1.05,1.05);
-          opacity: 0.5;
-      }
-
-      .title--right--about--underbar{
-        display: none;
-        background: blue;
-        width: 100%;
-        margin-top: 2px;
-        height: 3px;
-      }
-    }
-
     &--vote{
-      display: inline-block;
       margin-left: 10px;
+      padding-right: 20px;
 
       .vote-link{
         text-decoration: none;
@@ -120,8 +99,8 @@
     }
 
     &--mypage{
-      display: inline-block;
       margin-left: 10px;
+      padding-right: 20px;
 
       .mypage-link{
         text-decoration: none;
@@ -143,7 +122,6 @@
     }
 
     &--logout{
-      display: inline-block;
       margin-left: 10px;
 
       .logout-link{

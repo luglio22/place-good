@@ -39,14 +39,20 @@
   %table.user-vote
     %tbody.user-vote--body
       .user-vote--title 投稿一覧
+      %tr.user-vote--body--record
+        %td.user-vote--body--record--cell ID
+        %td.user-vote--body--record--cell タイトル
+        %td.user-vote--body--record--cell 投稿日
       -@product.each do |products|
         %tr.user-vote--body--record
-          %td.user-vote--body--record--cell タイトル
           %td.user-vote--body--record--cell
-            =link_to "#" do
-              .cell-title
-                = products.title
-          %td.user-vote--body--record--cell 投稿日
+            = products.id
+          %td.user-vote--body--record--cell
+            = products.title
           %td.user-vote--body--record--cell
             = products.created_at.strftime("%Y年%m月%d日%H:%M")
+
+          -# each内での画像表示
+          -# %td.user-vote--body--record--cell
+          -#   = image_tag products.image.to_s
 

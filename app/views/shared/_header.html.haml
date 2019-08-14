@@ -1,34 +1,37 @@
 .products-top--title
-  .products-top--title--text
-    .products-top--title--text-g G
-    .products-top--title--text-o o
-    .products-top--title--text-o2 o
-    .products-top--title--text-d d
-    .products-top--title--text-p P
-    .products-top--title--text-l l
-    .products-top--title--text-a a
-    .products-top--title--text-c c
-    .products-top--title--text-e e
-  .products-top--title--describe あなたの地元、思い出の場所はどこですか？？
-  .products-top--title--right
-    .products-top--title--right--about
-      = link_to "about this service", users_path ,class: "about-link"
-      .title--right--about--underbar
-    - if user_signed_in?
-      .products-top--title--right--vote
-        = link_to "投稿", new_product_path ,class: "vote-link"
-        .title--right--vote--underbar
-      .products-top--title--right--mypage
-        = link_to users_path,class: "mypage-link" do
-          =@user.nickname
-        .title--right--mypage--underbar
-      .products-top--title--right--logout
-        = link_to "ログアウト", destroy_user_session_path,method: :delete, class: "logout-link"
-        .title--right--logout--underbar
-    -else
-      .products-top--title--right--login
-        = link_to "ログイン", new_user_session_path ,class: "login-link"
-        .title--right--login--underbar
-      .products-top--title--right--table
-        = link_to "新規登録", new_user_registration_path, class: "title--table-link"
-        .title--right--table--underbar
+  = link_to products_path do
+    .products-top--title--text
+      .products-top--title--text-g G
+      .products-top--title--text-o o
+      .products-top--title--text-o2 o
+      .products-top--title--text-d d
+      .products-top--title--text-p P
+      .products-top--title--text-l l
+      .products-top--title--text-a a
+      .products-top--title--text-c c
+      .products-top--title--text-e e
+  %table.products-top--title--right
+    %tr.table-record
+      - if user_signed_in?
+        %td.products-top--title--right--vote
+          %i.far.fa-comment-alt
+          = link_to "投稿", new_product_path ,class: "vote-link"
+          .title--right--vote--underbar
+        %td.products-top--title--right--mypage
+          %i.far.fa-address-card
+          = link_to users_path,class: "mypage-link" do
+            =@user.nickname
+          .title--right--mypage--underbar
+        %td.products-top--title--right--logout
+          %i.fas.fa-door-open
+          = link_to "ログアウト", destroy_user_session_path,method: :delete, class: "logout-link"
+          .title--right--logout--underbar
+      -else
+        %td.products-top--title--right--login
+          %i.fas.fa-pen-fancy
+          = link_to "ログイン", new_user_session_path ,class: "login-link"
+          .title--right--login--underbar
+        %td.products-top--title--right--table
+          %i.fas.fa-user-tie
+          = link_to "新規登録", new_user_registration_path, class: "title--table-link"
+          .title--right--table--underbar

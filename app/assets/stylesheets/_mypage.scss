@@ -162,6 +162,17 @@
       }
     tr.user-vote--body--record{
       border: 1px  solid #333;
+
+      td.user-vote--body--record--cell{
+        padding: 0 0 0 20px;
+      }
+
+      .aaa{
+        height: 200px;
+        width: 400px;
+        overflow: auto;
+        padding: 0;
+      }
     }
     }
   }

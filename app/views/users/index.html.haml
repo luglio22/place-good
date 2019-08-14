@@ -43,6 +43,7 @@
         %td.user-vote--body--record--cell ID
         %td.user-vote--body--record--cell タイトル
         %td.user-vote--body--record--cell 投稿日
+        %td.user-vote--body--record--cell 画像
       -@product.each do |products|
         %tr.user-vote--body--record
           %td.user-vote--body--record--cell
@@ -51,8 +52,8 @@
             = products.title
           %td.user-vote--body--record--cell
             = products.created_at.strftime("%Y年%m月%d日%H:%M")
-
           -# each内での画像表示
-          -# %td.user-vote--body--record--cell
-          -#   = image_tag products.image.to_s
+          %td.user-vote--body--record--cell
+            .aaa
+              = image_tag products.image.to_s
 

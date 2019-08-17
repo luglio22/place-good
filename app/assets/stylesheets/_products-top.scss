@@ -3,8 +3,8 @@
 
   &--image{
     display: flex;
+    flex-wrap: wrap;
     max-width: 1300px;
-    height: 600px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 0 auto;
@@ -15,14 +15,16 @@
       .link-top-left{
         text-decoration: none;
 
-        .top-image-left{
-          width: 400px;
-          height: 400px;
-          display: block;
+        .products-top--image--left--objects{
+          height: 380px;
+          width: 380px;
+          overflow: auto;
           -webkit-transition: 0.3s ease-in-out;
           -moz-transition: 0.3s ease-in-out;
           -o-transition: 0.3s ease-in-out;
           transition: 0.5s;
+          border: 1px solid #333;
+
         }
         :hover{
           transform: scale(1.05,1.05);
@@ -31,110 +33,26 @@
           -webkit-transform: scale(1.1,1.1);
           -o-transform: scale(1.1,1.1);
           -ms-transform: scale(1.1,1.1);
+          -webkit-filter: sepia(100%);
+          filter: grayscale(100%);
         }
       }
 
       .top-image-left--title{
-        display: none;
         color: #333;
         font-size: 20px;
         font-weight: bold;
         font-family: 'Hannotate SC',sans-serif;
         margin-top: 20px;
-      }
-
-      .top-image-left--text{
-        display: none;
-        color: #333;
-        font-size: 12px;
-        margin-top: 10px;
-        font-family: 'Hannotate SC',sans-serif;
-      }
-    }
-
-    &--center{
-      margin: 16px;
-
-      .link-top-center{
-        text-decoration: none;
-
-      .top-image-center{
-        width: 400px;
-        height: 400px;
-        display: block;
-        -webkit-transition: 0.3s ease-in-out;
-        -moz-transition: 0.3s ease-in-out;
-        -o-transition: 0.3s ease-in-out;
-        transition: 0.5s;
-      }
-
-      :hover{
-        transform: scale(1.05,1.05);
-        opacity: 0.5;
-        -moz-transform: scale(1.1,1.1);
-        -webkit-transform: scale(1.1,1.1);
-        -o-transform: scale(1.1,1.1);
-        -ms-transform: scale(1.1,1.1);
-      }
-      .top-image-center--title{
-        display: none;
-        color: #333;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: 'Hannotate SC',sans-serif;
-        margin-top: 20px;
-      }
-
-      .top-image-center--text{
-        display: none;
-        color: #333;
-        font-size: 12px;
-        margin-top: 10px;
-        font-family: 'Hannotate SC',sans-serif;
       }
     }
   }
+}
 
-    &--right{
-      margin: 16px;
 
-      .link-top-right{
-        text-decoration: none;
-
-      .top-image-right{
-        width: 400px;
-        height: 400px;
-        display: block;
-        -webkit-transition: 0.3s ease-in-out;
-        -moz-transition: 0.3s ease-in-out;
-        -o-transition: 0.3s ease-in-out;
-        transition: 0.5s;
-      }
-    }
-      :hover{
-        transform: scale(1.05,1.05);
-        opacity: 0.5;
-        -moz-transform: scale(1.1,1.1);
-        -webkit-transform: scale(1.1,1.1);
-        -o-transform: scale(1.1,1.1);
-        -ms-transform: scale(1.1,1.1);
-      }
-      .top-image-right--title{
-        display: none;
-        color: #333;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: 'Hannotate SC',sans-serif;
-        margin-top: 20px;
-      }
-
-      .top-image-right--text{
-        display: none;
-        color: #333;
-        font-size: 12px;
-        margin-top: 10px;
-        font-family: 'Hannotate SC',sans-serif;
-      }
-    }
-  }
+  .scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
 }

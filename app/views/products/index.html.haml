@@ -1,21 +1,13 @@
 .products-top
   =render "shared/header"
   .products-top--image
-    .products-top--image--left
-      = link_to "#", class: "link-top-left" do
-        = image_tag "https://cdn.jalan.jp/jalan/img/7/kuchikomi/1647/KXL/7ba2b_0001647501_1.jpg",class: "top-image-left"
-        .top-image-left--title 洞爺湖
-        .top-image-left--text 北海道虻田郡洞爺湖町
-    .products-top--image--center
-      = link_to "#", class: "link-top-center" do
-        = image_tag "https://cdn.jalan.jp/jalan/img/4/kuchikomi/1104/KXL/ff97d_0001104810_1.jpg", class: "top-image-center"
-        .top-image-center--title 小岩井農場の一本桜
-        .top-image-center--text 岩手県岩手郡雫石町丸谷地
-    .products-top--image--right
-      = link_to "#", class: "link-top-right" do
-        =image_tag "https://img.travel.rakuten.co.jp/mytrip/content/ranking/spot-tokyo/images/01-3-skytree.jpg",class: "top-image-right"
-        .top-image-right--title スカイツリー
-        .top-image-right--text 東京都墨田区押上1丁目1-2
+    -@producta.each do |products|
+      .products-top--image--left
+        = link_to "#", class: "link-top-left" do
+          .products-top--image--left--objects
+            = image_tag products.image.to_s
+          .top-image-left--title
+            = products.title
 .product-vote
   .product-vote--title 投稿
   .product-vote--main
@@ -32,3 +24,7 @@
           = f.file_field :image, class: "vote-form--image-field"
       .product-vote--next
         = button_tag "投稿",class: "vote-btn"
+.scrollTop
+  %i.fas.fa-chevron-up
+
+

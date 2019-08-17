@@ -68,6 +68,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'devise'
   gem 'jquery-rails'
   gem 'carrierwave'
+  gem 'bootstrap-sass'
   group :development, :test do
     gem 'mysql2', '>= 0.4.4', '< 0.6.0'
   end

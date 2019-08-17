@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
   def index
-    @user = User.new
-    @users = current_user
+    @users = User.new
+    @user = current_user
     @product = Product.where(params[:id])
   end
 

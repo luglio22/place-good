@@ -10,32 +10,32 @@
       %th.user-top--main--nickname--left
         .user-top--main--nickname--left--text ニックネーム
       %td.user-top--main--nickname--right
-        = @users.nickname
+        = @user.nickname
     %tr.user-top--main--fist-name
       %th.user-top--main--fist-name--left
         .user-top--main--fist-name--left--text 苗字
       %td.user-top--main--fist-name--right
-        = @users.first_name
+        = @user.first_name
     %tr.user-top--main--last-name
       %th.user-top--main--last-name--left
         .user-top--main--last-name--left--text 名前
       %td.user-top--main--last-name--right
-        = @users.last_name
+        = @user.last_name
     %tr.user-top--main--fist-name-jp
       %th.user-top--main--fist-name-jp--left
         .user-top--main--fist-name-jp--left--text 苗字(フリガナ)
       %td.user-top--main--fist-name-jp--right
-        = @users.first_name_jp
+        = @user.first_name_jp
     %tr.user-top--main--last-name-jp
       %th.user-top--main--last-name-jp--left
         .user-top--main--last-name-jp--left--text 名前(フリガナ)
       %td.user-top--main--last-name-jp--right
-        = @users.last_name_jp
+        = @user.last_name_jp
     %tr.user-top--main--address
       %th.user-top--main--address--left
         .user-top--main--address--left--text 住所
       %td.user-top--main--address--right
-        = @users.add_ress
+        = @user.add_ress
   %table.user-vote
     %tbody.user-vote--body
       .user-vote--title 投稿一覧
@@ -56,4 +56,5 @@
           %td.user-vote--body--record--cell
             .aaa
               = image_tag products.image.to_s
+
 

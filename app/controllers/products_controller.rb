@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
 
   def index
     @user = current_user
+    @producta = Product.where(params[:id])
   end
 
   def new

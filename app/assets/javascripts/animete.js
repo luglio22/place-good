@@ -15,10 +15,10 @@ $(document).on("turbolinks:load",function(){
     e.preventDefault();
     return false;
   })
-  //about this
-  $(".about-link").click(function(e){
-    $('html, body').animate({scrollTop:$('.about-this').offset().top});
-    e.preventDefault();
-    return false;
-  })
+  $(".fas.fa-chevron-up").click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
 })

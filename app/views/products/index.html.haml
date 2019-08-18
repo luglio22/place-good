@@ -3,7 +3,7 @@
   .products-top--image
     -@producta.each do |products|
       .products-top--image--left
-        = link_to "#", class: "link-top-left" do
+        = link_to product_path(products.id), class: "link-top-left" do
           .products-top--image--left--objects
             = image_tag products.image.to_s
           .top-image-left--title

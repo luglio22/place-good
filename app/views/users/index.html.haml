@@ -52,7 +52,7 @@
             = products.created_at.strftime("%Y年%m月%d日%H:%M")
           -# each内での画像表示
           %td.user-vote--body--record--cell
-            = link_to "#" do
+            = link_to product_path(products.id) do
               .products--describe--link
                 = products.describe
                 -# = image_tag products.image.to_s

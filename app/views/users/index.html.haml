@@ -3,8 +3,6 @@
   .user-top--title 登録情報
   .user-top--btn
     = link_to "編集", "#", class: "user-top--btn-link"
-  .user-top--btn
-    = link_to "トップページに戻る", products_path, class: "user-top--btn-link"
   %table.user-top--main
     %tr.user-top--main--nickname
       %th.user-top--main--nickname--left
@@ -56,5 +54,8 @@
           %td.user-vote--body--record--cell
             .aaa
               = image_tag products.image.to_s
-
+.user-top--btn
+  = link_to "TopPage", products_path, class: "user-top--btn-link"
+.scrollTop
+  %i.fas.fa-chevron-up
 

@@ -16,23 +16,22 @@
 
     table.vote-table{
       margin: 10px;
-      display: inline-block;
       vertical-align: middle;
 
-      td.vote-table--title{
+      tr.vote-table--title{
         .vote-form--title-field{
           border-radius:10%;
         }
       }
 
-      td.vote-table--describe{
+      tr.vote-table--describe{
         padding-left: 20px;
         .vote-form--describe-field{
           border-radius:10%;
         }
       }
 
-      td.vote-table--image{
+      tr.vote-table--image{
         padding-left: 20px;
       }
     }
@@ -45,7 +44,6 @@
         height: 60px;
         width: 60px;
         display: block;
-        border-radius: 30px;
         background: #fff;
         -webkit-transition: 0.3s ease-in-out;
           -moz-transition: 0.3s ease-in-out;

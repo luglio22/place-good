@@ -52,8 +52,12 @@
             = products.created_at.strftime("%Y年%m月%d日%H:%M")
           -# each内での画像表示
           %td.user-vote--body--record--cell
-            .aaa
-              = image_tag products.image.to_s
+            = link_to "#" do
+              .products--describe--link
+                = products.describe
+                -# = image_tag products.image.to_s
+
+                -# = link_to "詳細", tweet_path(tweet.id), method: :get
 .user-top--btn
   = link_to "TopPage", products_path, class: "user-top--btn-link"
 .scrollTop

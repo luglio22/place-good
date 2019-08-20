@@ -15,10 +15,14 @@ $(document).on("turbolinks:load",function(){
     e.preventDefault();
     return false;
   })
-  $(".fas.fa-chevron-up").click(function () {
+  $(".scrollTop").click(function () {
         $('body,html').animate({
             scrollTop: 0
         }, 500);
+        return false;
+    });
+  $(".scrollDown").click(function () {
+        $('body,html').animate({scrollTop:$(document).height()}, 1000);
         return false;
     });
 })

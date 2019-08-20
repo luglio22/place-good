@@ -12,31 +12,30 @@
   .product-vote--title 投稿
   .product-vote--main
     = form_for :product, url: products_path do |f|
-      %table.vote-table
-        %tr.vote-table--title
-          -# .vote-table--title--text タイトル
-          -# = f.text_field :title, class: "vote-form--title-field",placeholder: "タイトル"
-          .cp_iptxt
-            = f.text_field :title, class: "ef",placeholder: "",type: "text"
-            -# %input.ef{:placeholder => "", :type => "text"}/
-            %label タイトル
-            %span.focus_line
-              %i
-        %tr.vote-table--describe
-          .cp_iptxt
-            = f.text_field :describe, class: "ef",placeholder: "",type: "text"
-            -# %input.ef{:placeholder => "", :type => "text"}/
-            %label 説明
-            %span.focus_line
-              %i
-          -# .vote-table--describe--text 説明
-          -# = f.text_field :describe, class: "vote-form--describe-field",placeholder: "説明"
-        %tr.vote-table--image
-          .vote-table--image--image 画像
-          = f.file_field :image, class: "vote-form--image-field"
-        %tr.vote-btn
-          %td.product-vote--next
-            = button_tag "投稿",class: "vote-btn"
+      -# .vote-table--title--text タイトル
+      -# = f.text_field :title, class: "vote-form--title-field",placeholder: "タイトル"
+      .cp_iptxt
+        = f.text_field :title, class: "ef",placeholder: "",type: "text"
+        -# %input.ef{:placeholder => "", :type => "text"}/
+        %label タイトル
+        %span.focus_line
+          %i
+      .cp_iptxt
+        = f.text_field :describe, class: "ef",placeholder: "",type: "text"
+        -# %input.ef{:placeholder => "", :type => "text"}/
+        %label 説明
+        %span.focus_line
+          %i
+        -# .vote-table--describe--text 説明
+        -# = f.text_field :describe, class: "vote-form--describe-field",placeholder: "説明"
+      .vote-table--image--image 画像
+      = f.file_field :image, class: "vote-form--image-field"
+      .vote-btn-parent
+        .product-vote--next
+          = button_tag "投稿",class: "vote-btn"
 .scrollTop
-  %i.fas.fa-chevron-up
+  %i.fas.fa-chevron-up.fa-2x
+.scrollDown
+  %i.fas.fa-chevron-down.fa-2x
+
 

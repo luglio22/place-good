@@ -1,5 +1,7 @@
 .products-top
   =render "shared/header"
+  .errorTextTitle タイトルが入力されてません。
+  .errorTextDescribe 説明が入力されてません。
   .products-top--image
     -@producta.each do |products|
       .products-top--image--left
@@ -21,7 +23,7 @@
         %span.focus_line
           %i
       .cp_iptxt
-        = f.text_field :describe, class: "ef",placeholder: "",type: "text"
+        = f.text_field :describe, class: "efw",placeholder: "",type: "text"
         -# %input.ef{:placeholder => "", :type => "text"}/
         %label 説明
         %span.focus_line

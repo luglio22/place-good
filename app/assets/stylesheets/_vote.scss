@@ -101,7 +101,7 @@
   }
 }
 
-//投稿アニメーション タイトル 説明
+//投稿アニメーション タイトル
 .cp_iptxt {
   position: relative;
   width: 80%;
@@ -171,5 +171,76 @@
   transition: 0.3s;
   color: #da3c41;
 }
+//投稿アニメーション 説明
+.cp_iptxt {
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
+}
+.cp_iptxt input[type='text'] {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 80%;
+  letter-spacing: 1px;
+  padding-left: 4em;
+  text-align: center;
+}
+.cp_iptxt input[type='text']:focus {
+  outline: none;
+}
+.efw {
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 1px solid #1b2538;
+  background-color: transparent;
+}
+.efw ~ .focus_line {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+}
+.efw ~ .focus_line:before,
+.efw ~ .focus_line:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  content: '';
+  transition: 0.4s;
+  background-color: #da3c41;
+}
+.efw ~ .focus_line:after {
+  right: 0;
+  left: auto;
+}
+.efw:focus ~ .focus_line:before,
+.efw:focus ~ .focus_line:after,
+.cp_iptxt.ef ~ .focus_line:before,
+.cp_iptxt.ef ~ .focus_line:after {
+  width: 50%;
+  transition: 0.4s;
+}
+.efw ~ label {
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+  color: #aaaaaa;
+}
+.efw:focus ~ label,
+.cp_iptxt.ef ~ label {
+  font-size: 12px;
+  top: -16px;
+  transition: 0.3s;
+  color: #da3c41;
+}
+
 
 

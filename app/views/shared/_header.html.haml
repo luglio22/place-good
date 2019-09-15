@@ -12,11 +12,18 @@
       .products-top--title--text-e e
   %table.products-top--title--right
     %tr.table-record
+      //ログイン後　マイページで無ければ表示、マイページはトップページへのリンク
       - if user_signed_in?
-        %td.products-top--title--right--vote
-          %i.far.fa-comment-alt
-          = link_to "投稿", new_product_path ,class: "vote-link"
-          .title--right--vote--underbar
+        -unless current_page?(users_path)
+          %td.products-top--title--right--vote
+            %i.far.fa-comment-alt
+            = link_to "投稿", new_product_path ,class: "vote-link"
+            .title--right--vote--underbar
+        -else
+          %td.products-top--title--right--vote
+            %i.far.fa-comment-alt
+            = link_to "top", products_path ,class: "vote-link"
+            .title--right--vote--underbar
         %td.products-top--title--right--mypage
           %i.far.fa-address-card
           = link_to users_path,class: "mypage-link" do

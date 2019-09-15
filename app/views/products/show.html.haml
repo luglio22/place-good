@@ -1,13 +1,20 @@
 .user-top--btn
   = link_to "TopPage", products_path, class: "user-top--btn-link"
-.aa
-  = @product.title
-.products-top--image--left--objects
-  = image_tag @product.image.to_s
-.a
-製作中
-- if current_user.id == @product.user_id
-  .sa さぃ
+.scrollTop
+  %i.fas.fa-chevron-up.fa-2x
+.scrollDown
+  %i.fas.fa-chevron-down.fa-2x
 
+- if current_user.id == @product.user_id
+  = link_to "editBtn", "#", class: "editBtn"
+  = link_to "Mypage", users_path, class: "MypageLink"
 -else
-  .aa hoge
+
+%table.productDetails
+  %tr.productDetailsTitle
+    = @product.title
+  %tr.productDetailsImage
+    =image_tag @product.image.to_s,class: "imageObject"
+  %tr.productDetailsDescribe
+    =@product.describe
+

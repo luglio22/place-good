@@ -7,4 +7,11 @@ $(document).on("turbolinks:load",function(){
       e.preventDefault();
     }
   })
+  $(".delete-link").click(function(e){
+    var result = window.confirm( '本当によろしいですか？');
+    if(result == false){
+      return false;
+      e.preventDefault();
+    }
+  })
 })

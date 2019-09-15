@@ -2,14 +2,17 @@
   =render "shared/header"
   .errorTextTitle タイトルが入力されてません。
   .errorTextDescribe 説明が入力されてません。
-  .products-top--image
+  .products-top--content
     -@producta.each do |products|
-      .products-top--image--left
+      .products-top--content--each
         = link_to product_path(products.id), class: "link-top-left" do
-          .products-top--image--left--objects
-            = image_tag products.image.to_s
-          .top-image-left--title
+          //画像表示
+          -# .products-top--image--left--objects
+          -#   = image_tag products.image.to_s
+          .top--content--title
             = products.title
+          .top-image-left--describe
+            = products.describe
 .product-vote
   .product-vote--title 投稿
   .product-vote--main

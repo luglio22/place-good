@@ -1,38 +1,31 @@
 .products-top--title
   = link_to products_path do
     .products-top--title--text
-      .products-top--title--text-g G
-      .products-top--title--text-o o
-      .products-top--title--text-o2 o
-      .products-top--title--text-d d
-      .products-top--title--text-p P
-      .products-top--title--text-l l
-      .products-top--title--text-a a
-      .products-top--title--text-c c
-      .products-top--title--text-e e
+      .products-top--title--text-g タイトル
   %table.products-top--title--right
     %tr.table-record
       //ログイン後　マイページで無ければ表示、マイページはトップページへのリンク
       - if user_signed_in?
         -unless current_page?(users_path)
+        -else
+          %td.products-top--title--right--delete
+            =link_to "アカウントを削除する", users_path, method: :delete, class: "delete-link"
+      - if user_signed_in?
+        -unless current_page?(users_path)
           %td.products-top--title--right--vote
             %i.far.fa-comment-alt
             = link_to "投稿", new_product_path ,class: "vote-link"
-            .title--right--vote--underbar
         -else
           %td.products-top--title--right--vote
             %i.far.fa-comment-alt
             = link_to "top", products_path ,class: "vote-link"
-            .title--right--vote--underbar
         %td.products-top--title--right--mypage
           %i.far.fa-address-card
           = link_to users_path,class: "mypage-link" do
             =@user.nickname
-          .title--right--mypage--underbar
         %td.products-top--title--right--logout
           %i.fas.fa-door-open
           = link_to "ログアウト", destroy_user_session_path,method: :delete, class: "logout-link"
-          .title--right--logout--underbar
       -else
         %td.products-top--title--right--login
           %i.fas.fa-pen-fancy
@@ -41,4 +34,3 @@
         %td.products-top--title--right--table
           %i.fas.fa-user-tie
           = link_to "新規登録", new_user_registration_path, class: "title--table-link"
-          .title--right--table--underbar

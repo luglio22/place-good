@@ -55,11 +55,9 @@
             = link_to product_path(products.id) do
               .products--describe--link
                 = products.describe
-                -# = image_tag products.image.to_s
+          %td.user-vote--body--record--cell
+            = link_to "削除", product_path(products.id), method: :delete
 
-                -# = link_to "詳細", tweet_path(tweet.id), method: :get
-.user-top--btn
-  = link_to "TopPage", products_path, class: "user-top--btn-link"
 .scrollTop
   %i.fas.fa-chevron-up.fa-2x
 .scrollDown

@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
 
   def index
     @user = current_user
-    @producta = Product.all
+    @producta = Product.all.order("id desc").limit(9)
   end
 
   def new
@@ -24,7 +24,7 @@ class ProductsController < ApplicationController
   def destroy
     products = Product.find(params[:id])
     if products.destroy
-       redirect_to mypages_path
+       redirect_to users_path
     else
       render :show
     end

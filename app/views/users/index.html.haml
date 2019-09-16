@@ -1,8 +1,6 @@
 =render "shared/header"
 .user-top
   .user-top--title 登録情報
-  .user-top--btn
-    = link_to "編集", "#", class: "user-top--btn-link"
   %table.user-top--main
     %tr.user-top--main--nickname
       %th.user-top--main--nickname--left
@@ -41,7 +39,7 @@
         %td.user-vote--body--record--cell ID
         %td.user-vote--body--record--cell タイトル
         %td.user-vote--body--record--cell 投稿日
-        %td.user-vote--body--record--cell 画像
+        %td.user-vote--body--record--cell 内容
         %td.user-vote--body--record--cell
       -@product.each do |products|
         %tr.user-vote--body--record

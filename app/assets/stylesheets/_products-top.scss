@@ -30,7 +30,6 @@
           -o-transition: 0.3s ease-in-out;
           transition: 0.5s;
           border: 1px solid #333;
-
         }
       }
 
@@ -48,7 +47,7 @@
         margin-left: 10px;
       }
     }
-    :hover{
+    .products-top--content--each:hover{
       transform: scale(1.05,1.05);
       opacity: 0.5;
       -moz-transform: scale(1.1,1.1);

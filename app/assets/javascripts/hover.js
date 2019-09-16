@@ -11,5 +11,7 @@ $(document).on("turbolinks:load",function(){
   })
   $(".scrollDown").mouseout(function(){
     $(".scrollDown").css("opacity","0.5");
+  $(".scrollDown").mouseout(function(){
+    $(".scrollDown").css("opacity","0.5");
   })
 })
